@@ -38,3 +38,9 @@ git branch -M main
 git push -u origin main
 
 npm i react-roter-dom
+
+search-> flowbite react
+https://flowbite-react.com/docs/guides/vite
+
+client->npm i flowbite-react
+npm i react-icons
