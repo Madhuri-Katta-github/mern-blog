@@ -29,3 +29,12 @@ src->index.css
 cd ..
 git init
 git add .
+git commit -m "install reactjs and taiwind css and create the first template"
+
+create a repository in github
+
+git remote add origin https://github.com/Madhuri-Katta-github/mern-blog.git
+git branch -M main
+git push -u origin main
+
+npm i react-roter-dom
