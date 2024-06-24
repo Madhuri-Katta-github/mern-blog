@@ -1,0 +1,31 @@
+npm create vite@latest
+
+client->npm i
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+taiwind.config.js
+
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+
+src->index.css
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+cd ..
+git init
+git add .
