@@ -87,3 +87,10 @@ npm i dotenv(inorder to run .env)
 
 import dotenv from "dotenv";
 dotenv.config();
+
+4. protect the password from re writing or misuse
+
+npm i bcryptjs
+
+import bcryptjs from 'bcryptjs'
+
