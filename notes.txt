@@ -44,3 +44,38 @@ https://flowbite-react.com/docs/guides/vite
 
 client->npm i flowbite-react
 npm i react-icons
+
+2. creating package.json in the root directory
+
+- the reason we are doing that with when we deploy
+the application so that the server is going
+to read the file inside the root directory and
+understand our code so we need to put package.json
+
+cd..
+npm init -y(to create package.json)
+npm i express
+
+- add "type":"module", in package.json
+bcz while we excuting api/index file 
+there we importing express instead of using required.
+
+- to execute api/index file-> node api/index.js
+
+- if we make any changes in the code we need
+to restart the server again this is time
+consuming and annoying.
+
+-to run the server up and running even if
+we make changes in the code we need to
+install -> npm i nodemon
+now we can execute-> nodemon api/index
+or we can add script in package.json
+
+"scripts": {
+    "dev":"nodemon api/index.js",
+     "start":"node api/index.js"
+  },
+
+now we can run-> npm run dev
+
