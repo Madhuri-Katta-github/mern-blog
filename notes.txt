@@ -79,3 +79,11 @@ or we can add script in package.json
 
 now we can run-> npm run dev
 
+3. Create data base
+
+npm i mongoose
+
+npm i dotenv(inorder to run .env)
+
+import dotenv from "dotenv";
+dotenv.config();
