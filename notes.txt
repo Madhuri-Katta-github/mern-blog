@@ -94,3 +94,8 @@ npm i bcryptjs
 
 import bcryptjs from 'bcryptjs'
 
+5. npm i jsonwebtoken
+
+import jwt from 'jsonwebtoken';
+
+
