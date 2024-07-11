@@ -98,4 +98,7 @@ import bcryptjs from 'bcryptjs'
 
 import jwt from 'jsonwebtoken';
 
+6. to save data locally using redux-persist
+npm i redux-persist
+
 
