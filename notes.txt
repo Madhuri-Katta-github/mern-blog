@@ -101,4 +101,7 @@ import jwt from 'jsonwebtoken';
 6. to save data locally using redux-persist
 npm i redux-persist
 
+7. created firebase account and project
+npm install firebase
+
 
