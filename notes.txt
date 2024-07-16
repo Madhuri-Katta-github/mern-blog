@@ -104,4 +104,16 @@ npm i redux-persist
 7. created firebase account and project
 npm install firebase
 
-8. tailwindcss-> truncate-if we have long email then we can make it as dot dot
+8. tailwindcss-> truncate-if we have long
+ email then we can make it as dot dot
+
+9. An <Outlet> should be used in parent route
+ elements to render their child route elements.
+
+10. Navigate->react router dom- it is a component
+useNavigate-> is a hook
+
+A <Navigate> element changes the current
+location when it is rendered. It's a component 
+wrapper around useNavigate, and accepts all the
+same arguments as props.
