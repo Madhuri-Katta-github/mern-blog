@@ -104,4 +104,4 @@ npm i redux-persist
 7. created firebase account and project
 npm install firebase
 
-
+8. tailwindcss-> truncate-if we have long email then we can make it as dot dot
