@@ -117,3 +117,10 @@ A <Navigate> element changes the current
 location when it is rendered. It's a component 
 wrapper around useNavigate, and accepts all the
 same arguments as props.
+
+11. to update the progress of the image
+
+npm install --save react-circular-progressbar
+
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
