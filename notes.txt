@@ -124,3 +124,9 @@ npm install --save react-circular-progressbar
 
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+
+12. npm i cookie-parser
+
+import cookieParser from "cookie-parser";
+
+app.use(cookieParser());
