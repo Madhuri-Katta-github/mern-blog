@@ -130,3 +130,9 @@ import 'react-circular-progressbar/dist/styles.css';
 import cookieParser from "cookie-parser";
 
 app.use(cookieParser());
+
+13. 
+npm install react-quill --save
+
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
