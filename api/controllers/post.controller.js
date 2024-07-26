@@ -19,8 +19,55 @@ export const create = async (req, res, next) => {
     });
 
     try {
-       const savedPost=await newPost.save();
-       res.status(201).json(savedPost);
+        const savedPost = await newPost.save();
+        res.status(201).json(savedPost);
+    } catch (error) {
+        next(error);
+    }
+}
+
+export const getposts = async (req, res, next) => {
+    console.log(req.query);
+    try {
+        const startIndex = parseInt(req.query.startIndex) || 0;
+        const limit = parseInt(req.query.limit) || 9;
+        const startDirection = req.query.order === 'asc' ? 1 : -1;
+
+        //The $regex operator is used for pattern matching,
+        // and the i option makes the search case-insensitive.
+        const posts = await Post.find({
+            ...(req.query.userId && { userId: req.query.userId }),
+            ...(req.query.category && { category: req.query.category }),
+            ...(req.query.slug && { slug: req.query.slug }),
+            ...(req.query.postId && { _id: req.query.postId }),
+            ...(req.query.serachTerm && {
+                $or: [
+                    { title: { $regex: req.query.serachTerm, $options: 'i' } },
+                    { content: { $regex: req.query.serachTerm, $options: 'i' } },
+                ]
+            }),
+        }).sort({ updatedAt: startDirection }).skip(startIndex).limit(limit);
+
+        const totalPosts = await Post.countDocuments();
+
+        const now = new Date();
+
+        //from today to the last month
+        const oneMonthAgo = new Date(
+            now.getFullYear(),
+            now.getMonth() - 1,
+            now.getDate()
+        )
+
+        const lastMonthPosts = await Post.countDocuments({
+            createdAt: { $gte: oneMonthAgo },
+        });
+
+        res.status(200).json({
+            posts,
+            totalPosts,
+            lastMonthPosts
+        });
     } catch (error) {
         next(error);
     }
