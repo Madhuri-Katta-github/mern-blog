@@ -136,3 +136,12 @@ npm install react-quill --save
 
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+
+14. tailwind scrollbar
+
+npm install --save-dev tailwind-scrollbar
+
+plugins: [
+        // ...
+        require('tailwind-scrollbar'),
+],
