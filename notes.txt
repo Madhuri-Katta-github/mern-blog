@@ -145,3 +145,12 @@ plugins: [
         // ...
         require('tailwind-scrollbar'),
 ],
+
+15. time of creation(a day ago,1 month ago etc..)
+npm i moment
+
+import moment from "moment"
+
+<span>
+    {moment(comment.createdAt).fromNow()}
+</span>
